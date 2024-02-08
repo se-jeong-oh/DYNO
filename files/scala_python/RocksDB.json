@@ -1,0 +1,84 @@
+{
+  "batchId": 164,
+  "durationMs": {
+    "addBatch": 148,
+    "getBatch": 3,
+    "latestOffset": 12,
+    "queryPlanning": 16,
+    "triggerExecution": 197,
+    "walCommit": 8
+  },
+  "eventTime": {
+    "avg": "2023-08-08T06:10:28.747Z",
+    "max": "2023-08-08T06:10:33.639Z",
+    "min": "2023-08-08T06:10:23.993Z",
+    "watermark": "2023-08-08T06:16:03.648Z"
+  },
+  "id": "30ff3bd7-5f90-4fdb-a776-73e2d7e77eee",
+  "inputRowsPerSecond": 1000.0,
+  "name": "linear-road-Q3",
+  "numInputRows": 1000,
+  "processedRowsPerSecond": 5076.1421319796955,
+  "runId": "7c4e5667-5bd2-49ad-a60a-62aa74b8a9b8",
+  "sink": {
+    "description": "org.apache.spark.sql.execution.streaming.ConsoleTable$@741e1173",
+    "numOutputRows": 0
+  },
+  "sources": [
+    {
+      "description": "FileStreamSource[file:/home/sej/workspace/csv_data]",
+      "startOffset": {
+        "logOffset": 161
+      },
+      "endOffset": {
+        "logOffset": 162
+      },
+      "latestOffset": null,
+      "numInputRows": 1000,
+      "inputRowsPerSecond": 1000.0,
+      "processedRowsPerSecond": 5076.1421319796955
+    }
+  ],
+  "stateOperators": [
+    {
+      "operatorName": "stateStoreSave",
+      "numRowsTotal": 2786,
+      "numRowsUpdated": 0,
+      "allUpdatesTimeMs": 12,
+      "numRowsRemoved": 0,
+      "allRemovalsTimeMs": 5,
+      "commitTimeMs": 159,
+      "memoryUsedBytes": 211952,
+      "numRowsDroppedByWatermark": 1380,
+      "numShufflePartitions": 5,
+      "numStateStoreInstances": 5,
+      "customMetrics": {
+        "rocksdbBytesCopied": 0,
+        "rocksdbCommitCheckpointLatency": 43,
+        "rocksdbCommitCompactLatency": 0,
+        "rocksdbCommitFileSyncLatencyMs": 60,
+        "rocksdbCommitFlushLatency": 0,
+        "rocksdbCommitPauseLatency": 0,
+        "rocksdbCommitWriteBatchLatency": 38,
+        "rocksdbFilesCopied": 0,
+        "rocksdbFilesReused": 15,
+        "rocksdbGetCount": 1380,
+        "rocksdbGetLatency": 0,
+        "rocksdbPutCount": 5,
+        "rocksdbPutLatency": 38,
+        "rocksdbReadBlockCacheHitCount": 87,
+        "rocksdbReadBlockCacheMissCount": 0,
+        "rocksdbSstFileSize": 68344,
+        "rocksdbTotalBytesRead": 0,
+        "rocksdbTotalBytesReadByCompaction": 0,
+        "rocksdbTotalBytesReadThroughIterator": 250740,
+        "rocksdbTotalBytesWritten": 60,
+        "rocksdbTotalBytesWrittenByCompaction": 0,
+        "rocksdbTotalCompactionLatencyMs": 0,
+        "rocksdbWriterStallLatencyMs": 0,
+        "rocksdbZipFileBytesUncompressed": 37700
+      }
+    }
+  ],
+  "timestamp": "2023-08-08T06:17:57.000Z"
+}
