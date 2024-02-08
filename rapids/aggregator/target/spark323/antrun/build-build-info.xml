@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="build-info">
+  <target name="build-info">
+    <mkdir dir="/home/sej/workspace/rapids_nnStream/aggregator/target/spark323/extra-resources" />
+    <mkdir dir="/home/sej/workspace/rapids_nnStream/aggregator/target/spark323/tmp" />
+    <exec output="/home/sej/workspace/rapids_nnStream/aggregator/target/spark323/extra-resources/rapids4spark-version-info.properties" resultproperty="build-info.exitCode" errorproperty="build-info.errorMsg" failonerror="false" executable="bash">
+      <arg value="${spark.rapids.source.basedir}/build/build-info" />
+      <arg value="23.06.0" />
+      <arg value="23.06.0" />
+    </exec>
+    <fail message="exec build-info.sh failed, exit code is ${build-info.exitCode}, error msg is ${build-info.errorMsg}">
+      <condition>
+        <not>
+          <equals arg2="0" arg1="${build-info.exitCode}" />
+        </not>
+      </condition>
+    </fail>
+  </target>
+</project>

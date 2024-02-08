@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target xmlns:ac="antlib:net.sf.antcontrib" name="main">
+    <scriptdef src="${spark.rapids.source.basedir}/build/shimplify.py" name="shimplify" language="jython">
+      <attribute name="if" />
+    </scriptdef>
+    <shimplify if="shimplify" />
+  </target>
+</project>
